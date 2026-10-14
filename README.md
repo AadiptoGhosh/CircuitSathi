@@ -5,6 +5,10 @@
 
 ---
 
+**Live Server: https://circuitsathi.streamlit.app/**
+
+---
+
 ## 🌟 Overview & Product Vision
 
 **CircuitSathi** is a local-first engineering companion built for Electronics & Communication Engineering (ECE) students, robotics builders, makers, embedded systems developers, and hardware prototyping teams. 
