@@ -9,6 +9,7 @@ import shutil
 import logging
 from config import UPLOADS_DIR, CHROMA_DIR, SAMPLE_DOCS_DIR
 from src.retrieval import vector_store
+from typing import Any
 
 logger = logging.getLogger(__name__)
 

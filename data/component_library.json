@@ -1,0 +1,174 @@
+[
+  {
+    "name": "TB6612FNG Dual DC Motor Driver",
+    "part_number": "TB6612FNG",
+    "manufacturer": "Toshiba",
+    "category": "Motor Driver",
+    "operating_voltage": "Logic: 2.7V to 5.5V | Motor (VM): 4.5V to 15.0V",
+    "max_ratings": "Absolute Max VM: 15V | VCC: 6V | Output Peak: 3.2A",
+    "continuous_current": "1.2A per channel (typical with heatsink: 1.0A)",
+    "peak_current": "3.2A (pulse < 20ms)",
+    "pin_configuration": [
+      "VM: Motor power supply (4.5V - 15V)",
+      "VCC: Logic power supply (2.7V - 5.5V)",
+      "GND: Common Ground",
+      "AO1, AO2: Motor A outputs",
+      "BO1, BO2: Motor B outputs",
+      "PWMA, PWMB: PWM speed control inputs (up to 100 kHz)",
+      "AIN1, AIN2: Motor A direction logic",
+      "BIN1, BIN2: Motor B direction logic",
+      "STBY: Standby pin (Active HIGH to run motors)"
+    ],
+    "key_features": [
+      "High-efficiency low-RDS(on) DMOS output transistors (0.5\u03a9 typical)",
+      "Built-in thermal shutdown (TSD) circuit",
+      "Built-in low voltage detection (UVLO)",
+      "CW/CCW/Short brake/Stop motor control modes"
+    ],
+    "typical_applications": [
+      "Line following robots",
+      "Micromouse",
+      "Small DC gearmotor drives",
+      "Stepper motor control"
+    ],
+    "critical_warnings": [
+      "STBY pin MUST be pulled HIGH (to VCC); leaving STBY floating or LOW halts all motor outputs.",
+      "Connect common GND between microcontroller and battery ground to prevent floating logic levels."
+    ],
+    "source_reference": "Toshiba TB6612FNG Datasheet Rev 1.1",
+    "is_verified": true
+  },
+  {
+    "name": "L298N Dual H-Bridge Motor Driver",
+    "part_number": "L298N",
+    "manufacturer": "STMicroelectronics",
+    "category": "Motor Driver",
+    "operating_voltage": "Logic: 4.5V to 7.0V | Motor (VS): Up to 46V",
+    "max_ratings": "Absolute Max VS: 50V | Output Peak: 3A per channel",
+    "continuous_current": "2.0A per channel (requires substantial heatsink)",
+    "peak_current": "3.0A (non-repetitive)",
+    "pin_configuration": [
+      "VS: Motor Supply Voltage (up to 46V)",
+      "VSS: Logic Supply Voltage (5V)",
+      "GND: Ground",
+      "OUT1, OUT2: Motor A outputs",
+      "OUT3, OUT4: Motor B outputs",
+      "ENA, ENB: Enable pins (PWM speed control)",
+      "IN1, IN2, IN3, IN4: Direction inputs"
+    ],
+    "key_features": [
+      "High operating voltage capability (up to 46V)",
+      "Bipolar transistor architecture (Darlington outputs)",
+      "Onboard 5V regulator jumper on standard breakout modules"
+    ],
+    "typical_applications": [
+      "Heavy mobile robot chassis",
+      "Stepper motors",
+      "High-voltage DC motors (>12V)"
+    ],
+    "critical_warnings": [
+      "Darlington transistor outputs drop 1.8V to 3.2V as heat! Highly inefficient compared to MOSFET drivers like TB6612FNG.",
+      "If motor supply VS exceeds 12V, remove the 5V regulator jumper on typical breakout boards to prevent burning the onboard 78M05 regulator."
+    ],
+    "source_reference": "STMicroelectronics L298N Datasheet DocID1773 Rev 6",
+    "is_verified": true
+  },
+  {
+    "name": "LM7805 Positive Voltage Regulator",
+    "part_number": "LM7805",
+    "manufacturer": "Texas Instruments / Fairchild",
+    "category": "Linear Voltage Regulator",
+    "operating_voltage": "Input: 7V to 25V (Recommended: 7V to 12V) | Output: 5.0V \u00b1 4%",
+    "max_ratings": "Absolute Max Input: 35V | Internal Thermal Overload & Short Circuit Protection",
+    "continuous_current": "1.0A (with adequate heatsink, TO-220 package)",
+    "peak_current": "2.2A peak short circuit",
+    "pin_configuration": [
+      "Pin 1 (Input): Unregulated DC input (7V - 25V)",
+      "Pin 2 (Ground): Common ground reference",
+      "Pin 3 (Output): Regulated +5.0V DC output"
+    ],
+    "key_features": [
+      "Thermal overload protection",
+      "Internal short circuit current limiting",
+      "Output transistor safe-area compensation"
+    ],
+    "typical_applications": [
+      "5V power rails for microcontrollers and sensors",
+      "On-card regulation to eliminate distribution noise"
+    ],
+    "critical_warnings": [
+      "Linear dropout: Requires at least 2.0V headroom (Vin >= 7.0V for stable 5V output).",
+      "Power dissipation: Linear loss P = (Vin - 5V) * Iout. At 12V in and 500mA out, dissipates 3.5 Watts of heat \u2014 will overheat and shut down without a heatsink!",
+      "Requires 0.33\u00b5F input capacitor and 0.1\u00b5F output capacitor placed close to pins to prevent high-frequency oscillation."
+    ],
+    "source_reference": "Texas Instruments LM340/LM78XX Datasheet SNOSBD0L",
+    "is_verified": true
+  },
+  {
+    "name": "ESP32-WROOM-32D Development Board",
+    "part_number": "ESP32-WROOM-32D",
+    "manufacturer": "Espressif Systems",
+    "category": "Microcontroller / SoC",
+    "operating_voltage": "Module: 3.0V to 3.6V (Typical: 3.3V) | Dev Board Vin (USB/5V): 5.0V",
+    "max_ratings": "Absolute Max VDD: 3.6V | GPIO Max Voltage: 3.6V (NOT 5V tolerant)",
+    "continuous_current": "Max GPIO source/sink: 40mA (Recommended: 12mA per pin)",
+    "peak_current": "Up to 500mA during WiFi/BT RF transmit bursts",
+    "pin_configuration": [
+      "3V3: 3.3V regulated power rail",
+      "GND: Ground pins",
+      "EN (CHIP_PU): Reset / Enable (pull HIGH with 10k to run)",
+      "GPIO0: Boot mode selection (LOW for flashing)",
+      "GPIO2: Strapping pin (must be floating or LOW to boot)",
+      "GPIO34-39: Input-ONLY pins (no internal pullups)",
+      "GPIO21 (SDA), GPIO22 (SCL): Default hardware I2C",
+      "GPIO1 (TX0), GPIO3 (RX0): Hardware UART0"
+    ],
+    "key_features": [
+      "Dual-core Xtensa 32-bit LX6 microprocessor up to 240 MHz",
+      "Integrated 802.11 b/g/n Wi-Fi and Bluetooth v4.2 BR/EDR and BLE",
+      "520 KB SRAM, 448 KB ROM, 4MB / 8MB SPI Flash",
+      "Capacitive touch, ADC, DAC, PWM, I2C, SPI, UART, CAN"
+    ],
+    "typical_applications": [
+      "IoT sensor nodes",
+      "Robotics wireless telemetry",
+      "Smart home automation",
+      "Edge computing"
+    ],
+    "critical_warnings": [
+      "CRITICAL: GPIO pins are NOT 5V tolerant. Connecting 5V logic (e.g. 5V Arduino Uno signals) directly to ESP32 pins will permanently damage the silicon.",
+      "WiFi transmission causes sharp current spikes of ~500mA. Inadequate power supply or long wires cause brownout resets (Brownout detector was triggered)."
+    ],
+    "source_reference": "Espressif Systems ESP32-WROOM-32D Datasheet v2.1",
+    "is_verified": true
+  },
+  {
+    "name": "1N4007 Standard Recovery Rectifier Diode",
+    "part_number": "1N4007",
+    "manufacturer": "Vishay / Diodes Inc / ON Semi",
+    "category": "Diode / Rectifier",
+    "operating_voltage": "Peak Repetitive Reverse Voltage (VRRM): 1000V",
+    "max_ratings": "VRRM: 1000V | Forward Voltage Drop (VF): 1.1V at 1.0A",
+    "continuous_current": "1.0A average rectified forward current",
+    "peak_current": "30A non-repetitive peak forward surge (8.3ms half sine)",
+    "pin_configuration": [
+      "Anode: Connected to lower potential / positive in forward bias",
+      "Cathode: Marked by silver/white stripe band"
+    ],
+    "key_features": [
+      "High forward surge capability",
+      "Low reverse leakage current (5\u00b5A max at 25\u00b0C)",
+      "Standard DO-41 axial lead package"
+    ],
+    "typical_applications": [
+      "Mains AC to DC rectification",
+      "Reverse polarity protection for low-current circuits",
+      "Flyback suppression diode for slow-switching inductive relays"
+    ],
+    "critical_warnings": [
+      "Standard recovery diode (reverse recovery time Trr is not specified, typically > 2-5\u00b5s). NOT suitable for high-frequency PWM (> 1 kHz) motor flyback! Use fast recovery or Schottky diodes (1N5819, UF4007) for PWM circuits to prevent switching spikes."
+    ],
+    "source_reference": "Vishay General Semiconductor 1N4001 thru 1N4007 Datasheet Doc 88503",
+    "is_verified": true
+  }
+]
