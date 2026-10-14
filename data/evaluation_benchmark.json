@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the absolute maximum motor supply voltage (VM) for TB6612FNG?",
+    "expected_answer_keywords": ["15", "15.0 V", "15 V"],
+    "expected_page": 1
+  },
+  {
+    "id": 2,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the peak output current rating per channel for the TB6612FNG?",
+    "expected_answer_keywords": ["3.2 A", "3.2A"],
+    "expected_page": 1
+  },
+  {
+    "id": 3,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the continuous average output current rating for TB6612FNG?",
+    "expected_answer_keywords": ["1.2 A", "1.0 A", "average"],
+    "expected_page": 1
+  },
+  {
+    "id": 4,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the typical output ON-resistance (Ron) of the TB6612FNG output transistors?",
+    "expected_answer_keywords": ["0.5", "ohm", "Ron"],
+    "expected_page": 1
+  },
+  {
+    "id": 5,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the control logic supply voltage (VCC) operating range for TB6612FNG?",
+    "expected_answer_keywords": ["2.7 V to 5.5 V", "2.7", "5.5"],
+    "expected_page": 2
+  },
+  {
+    "id": 6,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the recommended motor supply voltage (VM) operating range for TB6612FNG?",
+    "expected_answer_keywords": ["4.5 V to 13.5 V", "4.5", "13.5"],
+    "expected_page": 2
+  },
+  {
+    "id": 7,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the function of the STBY pin on TB6612FNG?",
+    "expected_answer_keywords": ["Standby", "HIGH", "Hi-Z", "normal"],
+    "expected_page": 2
+  },
+  {
+    "id": 8,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the maximum PWM control frequency supported by TB6612FNG?",
+    "expected_answer_keywords": ["100 kHz", "100"],
+    "expected_page": 2
+  },
+  {
+    "id": 9,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "Which pins are used for Motor A driver outputs on the TB6612FNG?",
+    "expected_answer_keywords": ["AO1", "AO2"],
+    "expected_page": 2
+  },
+  {
+    "id": 10,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What happens to the motor outputs when both IN1 and IN2 are set HIGH?",
+    "expected_answer_keywords": ["Short Brake", "Brake"],
+    "expected_page": 3
+  },
+  {
+    "id": 11,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What is the typical junction temperature for thermal shutdown (TSD) on the TB6612FNG?",
+    "expected_answer_keywords": ["175", "deg C"],
+    "expected_page": 3
+  },
+  {
+    "id": 12,
+    "doc_name": "TB6612FNG_Datasheet.pdf",
+    "question": "What decoupling capacitors are recommended across VM and GND for TB6612FNG?",
+    "expected_answer_keywords": ["0.1 uF", "10 uF", "capacitor"],
+    "expected_page": 3
+  },
+  {
+    "id": 13,
+    "doc_name": "LM7805_Datasheet.pdf",
+    "question": "What is the regulated nominal output voltage of the LM7805?",
+    "expected_answer_keywords": ["5.0 V", "5V", "5.0"],
+    "expected_page": 1
+  },
+  {
+    "id": 14,
+    "doc_name": "LM7805_Datasheet.pdf",
+    "question": "What is the absolute maximum input voltage for the LM7805?",
+    "expected_answer_keywords": ["35 V", "35"],
+    "expected_page": 1
+  },
+  {
+    "id": 15,
+    "doc_name": "LM7805_Datasheet.pdf",
+    "question": "What is the recommended input voltage range for the LM7805 regulator?",
+    "expected_answer_keywords": ["7.0 V to 25.0 V", "7V", "25V"],
+    "expected_page": 1
+  },
+  {
+    "id": 16,
+    "doc_name": "LM7805_Datasheet.pdf",
+    "question": "What is the typical dropout voltage of the LM7805 at 1.0A output current?",
+    "expected_answer_keywords": ["2.0 V", "2.0V", "2V"],
+    "expected_page": 1
+  },
+  {
+    "id": 17,
+    "doc_name": "LM7805_Datasheet.pdf",
+    "question": "What is the typical quiescent current of the LM7805 regulator?",
+    "expected_answer_keywords": ["5.0 mA", "5.0", "quiescent"],
+    "expected_page": 1
+  },
+  {
+    "id": 18,
+    "doc_name": "LM7805_Datasheet.pdf",
+    "question": "What is the pinout assignment of the LM7805 in the TO-220 package?",
+    "expected_answer_keywords": ["Pin 1: Input", "Pin 2: Ground", "Pin 3: Output"],
+    "expected_page": 1
+  },
+  {
+    "id": 19,
+    "doc_name": "LM7805_Datasheet.pdf",
+    "question": "What is the value of the recommended input capacitor for the LM7805?",
+    "expected_answer_keywords": ["0.33 uF", "0.33"],
+    "expected_page": 2
+  },
+  {
+    "id": 20,
+    "doc_name": "LM7805_Datasheet.pdf",
+    "question": "How much power is dissipated by the LM7805 with 12V input, 5V output, and 500mA load?",
+    "expected_answer_keywords": ["3.5 Watts", "3.5 W", "3.5"],
+    "expected_page": 2
+  }
+]
